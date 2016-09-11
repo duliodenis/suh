@@ -11,6 +11,7 @@
 		6C4201301D84CB1800F42E61 /* PhotoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42012F1D84CB1800F42E61 /* PhotoListController.swift */; };
 		6C4201351D84CB1800F42E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C4201341D84CB1800F42E61 /* Assets.xcassets */; };
 		6C4201381D84CB1800F42E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4201361D84CB1800F42E61 /* LaunchScreen.storyboard */; };
+		6C4201401D84E11800F42E61 /* MediaPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42013F1D84E11800F42E61 /* MediaPickerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		6C4201341D84CB1800F42E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C4201371D84CB1800F42E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C4201391D84CB1800F42E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C42013F1D84E11800F42E61 /* MediaPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				6C42012D1D84CB1800F42E61 /* AppDelegate.swift */,
 				6C42012F1D84CB1800F42E61 /* PhotoListController.swift */,
+				6C42013F1D84E11800F42E61 /* MediaPickerManager.swift */,
 				6C4201341D84CB1800F42E61 /* Assets.xcassets */,
 				6C4201361D84CB1800F42E61 /* LaunchScreen.storyboard */,
 				6C4201391D84CB1800F42E61 /* Info.plist */,
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4201401D84E11800F42E61 /* MediaPickerManager.swift in Sources */,
 				6C4201301D84CB1800F42E61 /* PhotoListController.swift in Sources */,
 				6C42012E1D84CB1800F42E61 /* AppDelegate.swift in Sources */,
 			);
@@ -274,6 +278,7 @@
 				6C42013E1D84CB1800F42E61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
