@@ -9,10 +9,22 @@
 import UIKit
 import MobileCoreServices
 
+
+// mechanism to pass the image regardless which object works with it
+// restricted to only working with Classes in order to define the delegate as a weak reference
+protocol MediaPickerManagerDelegate: class {
+    
+    func mediaPickerManager(manager: MediaPickerManager, didFinishPickingImage image: UIImage)
+    
+}
+
+
 class MediaPickerManager: NSObject {
 
     private let imagePickerController = UIImagePickerController()
     private let presentingViewController: UIViewController
+    
+    weak var delegate: MediaPickerManagerDelegate?
     
     init(presentingViewController: UIViewController) {
         self.presentingViewController = presentingViewController
@@ -38,3 +50,16 @@ class MediaPickerManager: NSObject {
         imagePickerController.dismissViewControllerAnimated(animated, completion: completion)
     }
 }
+
+
+// MARK: - imagePickerController Method
+
+extension MediaPickerManager: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        delegate?.mediaPickerManager(self, didFinishPickingImage: image)
+    }    
+}
+
+
